@@ -21,18 +21,17 @@ custom_domain = true
 pattern = "panel.aiquiz.pl"
 custom_domain = true
 
-# D1 Database - Run: wrangler d1 create aiquiz-oauth
+# D1 Database
 [[d1_databases]]
 binding = "DB"
 database_name = "aiquiz-oauth"
-database_id = "TODO_RUN_WRANGLER_D1_CREATE"
+database_id = "ae049cfc-a15e-4c81-b235-f4ab86c955df"
 
-# KV Namespaces - Run: wrangler kv:namespace create OAUTH_STORE
+# KV Namespaces
 [[kv_namespaces]]
 binding = "OAUTH_STORE"
-id = "TODO_RUN_WRANGLER_KV_CREATE"
+id = "ed207a9e99b2420cb3c65622c1b4d6f9"
 
-# KV Namespaces - Run: wrangler kv:namespace create USER_SESSIONS
 [[kv_namespaces]]
 binding = "USER_SESSIONS"
-id = "TODO_RUN_WRANGLER_KV_CREATE"
+id = "e5ad189139cd44f38ba0224c3d596c73"
