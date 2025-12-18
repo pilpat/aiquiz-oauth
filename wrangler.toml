@@ -1,0 +1,38 @@
+name = "aiquiz-oauth"
+main = "src/index.ts"
+compatibility_date = "2024-11-20"
+compatibility_flags = ["nodejs_compat"]
+
+# Static Assets Configuration
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+# OAuth 2.1 Configuration
+[vars]
+OAUTH_BASE_URL = "https://panel.aiquiz.pl"
+
+# Custom Domains (automatic DNS + certificate management)
+[[routes]]
+pattern = "api.aiquiz.pl"
+custom_domain = true
+
+[[routes]]
+pattern = "panel.aiquiz.pl"
+custom_domain = true
+
+# D1 Database - Run: wrangler d1 create aiquiz-oauth
+[[d1_databases]]
+binding = "DB"
+database_name = "aiquiz-oauth"
+database_id = "TODO_RUN_WRANGLER_D1_CREATE"
+
+# KV Namespaces - Run: wrangler kv:namespace create OAUTH_STORE
+[[kv_namespaces]]
+binding = "OAUTH_STORE"
+id = "TODO_RUN_WRANGLER_KV_CREATE"
+
+# KV Namespaces - Run: wrangler kv:namespace create USER_SESSIONS
+[[kv_namespaces]]
+binding = "USER_SESSIONS"
+id = "TODO_RUN_WRANGLER_KV_CREATE"
